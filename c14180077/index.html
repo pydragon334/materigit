@@ -3,16 +3,18 @@ c14180077
 kevin hartono
 <br>
 
-<input type="date" id="birthdaytime">
+<input type="date" id="date1">
+<input type="date" id="date2">
 <input type="submit" onclick="getDuration()">
 <br>
 <h3 id="hasil"></h3>
 
 <script>
 function getDuration(){
-    var input = document.getElementById("birthdaytime");
-    var dateInput = new Date(input.value);
-    var dateNow = new Date()
+    var input1 = document.getElementById("date1");
+    var input2 = document.getElementById("date2");
+    var dateInput = new Date(input1.value);
+    var dateNow = new Date(input2.value);
     
     var Difference_In_Time = Math.abs(dateInput.getTime() - dateNow.getTime()); 
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
