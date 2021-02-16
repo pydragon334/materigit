@@ -1,2 +1,24 @@
 c14180077
+<br>
 kevin hartono
+<br>
+
+<input type="date" id="birthdaytime">
+<input type="submit" onclick="getDuration()">
+<br>
+<h3 id="hasil"></h3>
+
+<script>
+function getDuration(){
+    var input = document.getElementById("birthdaytime");
+    var dateInput = new Date(input.value);
+    var dateNow = new Date()
+    
+    var Difference_In_Time = Math.abs(dateInput.getTime() - dateNow.getTime()); 
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    
+    document.getElementById("hasil").innerHTML = "selisih " + parseInt(Difference_In_Days) + " hari";
+
+    // console.log(parseInt(Difference_In_Days));
+}
+</script>
